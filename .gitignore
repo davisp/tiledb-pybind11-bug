@@ -1,0 +1,5 @@
+UNKNOWN.egg-info/
+__pycache__/
+build/
+errortest.cpython-311-darwin.so
+venv/
