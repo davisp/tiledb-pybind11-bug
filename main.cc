@@ -21,7 +21,9 @@ void init_context(py::module &m) {
 
 std::string do_dump(Group& group, bool recursive) {
   std::cerr << "DUMPING GROUP: " << (void*) &group << std::endl;
-  return group.dump(recursive);
+  auto ret = group.dump(recursive);
+  std::cerr << "FINISHED DUMPING GROUP: " << (void*) &group << std::endl;
+  return ret;
 }
 
 void init_group(py::module &m) {
