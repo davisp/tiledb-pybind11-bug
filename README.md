@@ -15,5 +15,5 @@ To Reproduce
 ===
 
 ```
-./run.sh
+$ ./run.sh
 ```
