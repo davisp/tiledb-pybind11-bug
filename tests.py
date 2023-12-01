@@ -6,7 +6,7 @@ class Group(errortest.Group):
     def __init__(self, uri):
         try:
             ctx = errortest.Context()
-            super().__init__(ctx, uri, errortest.QueryType.WRITE)
+            super().__init__(ctx, uri)
         except Exception as exc:
             print(exc)
             raise

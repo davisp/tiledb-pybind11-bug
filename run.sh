@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 
-echo "================================================"
-echo "This requires libtiledb installed in /opt/tiledb"
-echo "================================================"
-echo ""
-
-if [ -f "errortest.cpython-311-darwin.so" ]; then
-  rm errortest.cpython-311-darwin.so
+if [ -d "./build" ]; then
+  rm -rf "./build/"
 fi
 
 python3 -m venv venv
