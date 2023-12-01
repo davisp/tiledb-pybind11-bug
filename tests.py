@@ -4,7 +4,12 @@ import errortest
 
 class Group(errortest.Group):
     def __init__(self, uri):
-        super().__init__(ctx, uri, errortest.QueryType.WRITE)
+        try:
+            ctx = errortest.Context()
+            super().__init__(ctx, uri, errortest.QueryType.WRITE)
+        except Exception as exc:
+            print(exc)
+            raise
 
     def __repr__(self):
         return self._dump(True)

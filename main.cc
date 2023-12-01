@@ -1,7 +1,7 @@
 #include <pybind11/pybind11.h>
 
-#include <tiledb/tiledb>
-#include <tiledb/tiledb_experimental>
+#include "tiledb/tiledb"
+#include "tiledb/tiledb_experimental"
 
 using namespace tiledb;
 namespace py = pybind11;
@@ -40,6 +40,7 @@ void init_group(py::module &m) {
 
 PYBIND11_MODULE(errortest, m) {
     m.doc() = "Test exceptions from contructors";
+    init_enums(m);
     init_context(m);
     init_group(m);
 }
